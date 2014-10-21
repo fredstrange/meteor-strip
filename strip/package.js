@@ -1,18 +1,15 @@
 Package.describe({
-  name: 'fredstrange:strip',
-  summary: 'A Less Intrusive Responsive Lightbox',
-  version: '1.2.3',
-  git: 'https://github.com/fredstrange/meteor-strip.git'
+    summary: "A Less Intrusive Responsive Lightbox"
 });
 
-Package.onUse(function(api) {
+Package.on_use(function (api) {
     api.versionsFrom('METEOR@0.9.0');
 
     api.use(['jquery'], ['client']);;
 
-    api.add_files(["strip/js/strip.pkgd.js", "strip/css/strip.css"], "client");
+    api.add_files(["js/strip.pkgd.js", "css/strip.css"], "client");
 
-    var assetPath = 'strip/css/strip-skins/strip/'
+    var assetPath = 'css/strip-skins/strip/'
     var assetFiles = [
         assetPath + 'close.png',
         assetPath + 'close.svg',
